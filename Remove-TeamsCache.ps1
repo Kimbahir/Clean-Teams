@@ -1,4 +1,5 @@
 # Cleaning up the cache tables in Microsoft Teams for performance
+# USE AT YOUR OWN RISK
 
 $root = "$env:APPDATA\Microsoft\Teams"
 Get-ChildItem -Path "$root\Application Cache\Cache" -Include *.* -File -Recurse | foreach { $_.Delete()}
